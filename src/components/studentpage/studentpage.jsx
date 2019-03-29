@@ -18,44 +18,43 @@ import CardHeader from '@material-ui/core/CardHeader';
 import IconButton from '@material-ui/core/IconButton';
 import { FormControl, FormHelperText, Divider } from '@material-ui/core';
 import { isNullOrUndefined } from 'util';
+import ProfileCard from './profilecard.jsx';
 
 const styles = {
   card: {
     //maxWidth: 345,
-    //minWidth: '70vw',
-    marginLeft: 40,
-    //marginRight: 100,
+    minWidth: 200,
+    marginLeft: "50vw",
+    marginRight: "50vw",
     marginTop: 100,
-    width: "55vw",
+    width: 800,
     height: 400,
-    overflowX:'scroll',
-    
   },
   smallcard1: {
     //maxWidth: 345,
-    //minWidth: 200,
+    minWidth: 200,
     marginTop: 0,
-    marginLeft: 30,
+    marginLeft: 50,
     marginRight: 0,
-    width: "15vw",
+    width: 100,
     height: 250,
   },
   smallcard2: {
     //maxWidth: 345,
-    //minWidth: 200,
+    minWidth: 200,
     marginTop: 0,
-    marginLeft: 30,
+    marginLeft: 50,
     marginRight: 0,
-    width: "15vw",
+    width: 100,
     height: 250,
   },
   smallcard3: {
     //maxWidth: 345,
-    //minWidth: 200,
+    minWidth: 200,
     marginTop: 0,
-    marginLeft: 30,
-    marginRight: 30,
-    width: "15vw",
+    marginLeft: 50,
+    marginRight: 50,
+    width: 100,
     height: 250,
   },
   media: {
@@ -93,10 +92,12 @@ const styles = {
   },
   buttonmore:{
     marginLeft: 600,
-    marginRight: 10,
+    marginRight:10,
     color: "#B9B9B9",
   },
   div1:{
+    position:"absolute",
+    display: "inline",
     display: 'flex',
   },
   datetypecss:{
@@ -120,75 +121,31 @@ const styles = {
     fontFamily: "Microsoft JHengHei",
     marginTop: 10,
   },
-  
+  wrap:{
+  display: 'flex',
+  flexwrap: 'nowrap',
+  },
 };
 
 function ImgMediaCard(props) {
   const { classes } = props;
   return (
     <div>
-    <Card className={classes.card} >
-    {/* big card */}
-     
-      <CardHeader
-          action={
-            <IconButton>
-              <Arrowright/>
-            </IconButton>
-          }
-          className={classes.typetestcss}
-          title="Test Score"
-        />
-   
-    <div className={classes.div1}>
-    <div >
-    <Card className={classes.smallcard1}>
-    {/* small card1 */}
-        <CardContent>
-         <Typography align="center" className={classes.datetypecss}>10 / 9</Typography>
-         <Typography align="center" className={classes.scoretypecss}>87分</Typography>
-        </CardContent>
-        <Divider variant="middle"/>
-        <CardContent>
-          <Typography align="center" className={classes.classtypecss}>數 學 B 班</Typography>
-        </CardContent>
-      {/* <CardActions>
-        <Button size="small">Learn More</Button>
-      </CardActions> */}
-    </Card>
-    </div>
-    <div>
-      <Card className={classes.smallcard2}>
-    {/* small card2 */}
+      <div className={classes.wrap}>
+      <div>
 
-      <CardContent>
-        <Typography align="center" className={classes.datetypecss}>10 / 9</Typography>
-        <Typography align="center" className={classes.scoretypecss}>87分</Typography>
-      </CardContent>
-        <Divider variant="middle"/>
-      <CardContent>
-        <Typography align="center" className={classes.classtypecss}>數 學 B 班</Typography>
-      </CardContent>
-    </Card>
+      </div>
+      <ProfileCard/>
+        {/* <div>
+          <TestCard/>
+          <HomeworkCard/>
+        </div>
+        <div>
+          <AlertCard/>
+        </div>    */}
+      </div>
+           
     </div>
-
-    <div>
-      <Card className={classes.smallcard3}>
-    {/* small card3 */}
-      <CardContent>
-        <Typography align="center" className={classes.datetypecss}>10 / 9</Typography>
-        <Typography align="center" className={classes.scoretypecss}>87分</Typography>
-      </CardContent>
-        <Divider variant="middle"/>
-      <CardContent>
-        <Typography align="center" className={classes.classtypecss}>數 學 B 班</Typography>
-      </CardContent>
-    </Card>
-    </div>
-    </div>
-    </Card>
-    </div>
-    
   );
 }
 

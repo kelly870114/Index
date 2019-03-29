@@ -8,7 +8,8 @@ import Drawer from './app/drawer.jsx';
 import { AppBar } from '@material-ui/core';
 import Head from './app/head.jsx';
 import Home from './app/home.jsx';
-import LoginComponent from './login/logincomponent';
+import Login3 from './Loginpage/logincomponent';
+import Drawer2 from './studentpage/drawer.jsx';
  
 export default class ReactApp extends React.Component {
  
@@ -36,7 +37,7 @@ export default class ReactApp extends React.Component {
     render() {
         return (
                 <div>
-                    <LoginComponent/>
+                    <Drawer2/>
                 </div>
             
             )
